@@ -1,14 +1,18 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
+angular.module('myApp', ['ui.router']).
+config(['$stateProvider',  function($stateProvider) {
+    $stateProvider.state('cinema', {
+        url:'/cinema',
+        templateUrl: 'cinema.html',
+        controller: 'cinemaController'
+    });
 
-  $routeProvider.otherwise({redirectTo: '/view1'});
+    $stateProvider.state('cinema.film', {
+        url:'/cinema/:filmId',
+        templateUrl: 'film.html',
+        controller: 'filmController'
+    });
 }]);
+
