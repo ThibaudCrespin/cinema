@@ -1,0 +1,20 @@
+<div>
+
+    <p>Recherche : <input type="text" data-ng-model="search" /></p>
+
+    <div class="tableau">
+        <table>
+            <thead>
+            <tr>
+                <th>Nom</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-ng-repeat="item in items | filter:search">
+                <td><a href="#/film/{{item.id}}">{{item.name}}</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
