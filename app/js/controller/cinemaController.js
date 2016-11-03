@@ -4,7 +4,7 @@
 
 var projet = angular.module('projet');
 
-projet.controller('CinemaController', ['$scope','CinemaService','$filter', function ($scope,CinemaService,$filter) {
+projet.controller('CinemaController', ['$scope','CinemaService','$filter', function ( $scope, CinemaService, $filter ) {
 
 
     CinemaService.listCinema().then(function(response){
