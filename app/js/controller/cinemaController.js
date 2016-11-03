@@ -9,10 +9,8 @@ projet.controller('CinemaController', ['$scope','CinemaService','$filter', funct
 
     CinemaService.listCinema().then(function(response){
         $scope.items = response.data;
-
     });
 
-
-    //$scope.map = { center: { latitude: 46.1577, longitude: -1.15359 }, zoom: 8 };
+    $scope.map = { center: { latitude: 46.1577, longitude: -1.15359 }, zoom: 8 };
 
 }]);
