@@ -1,25 +1,42 @@
 /* app css stylesheet */
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+body {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
 }
 
-.menu:before {
-  content: "[";
+.tableau {
+    margin: 0px auto;
+    padding: 0px;
+    width: 50%;
+    box-shadow: 3px 3px 4px #888888;
+    border: 1px solid #000000;
+
+}
+.tableau table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.tableau tbody tr:nth-child(odd) {
+    background-color: #dedbff;
 }
 
-.menu:after {
-  content: "]";
+.tableau tbody tr:nth-child(even) {
+    background-color: #ffffff;
 }
 
-.menu > li {
-  display: inline;
+.form{
+    width: 20%;
+    margin: 0 auto;
+    text-align: left;
 }
-
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+.angular-google-map-container {
+    height: 400px;
+    width:40%;
+    margin:auto;
 }

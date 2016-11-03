@@ -1,10 +1,7 @@
-/**
- * Created by crespin on 02/11/2016.
- */
 'use strict';
 
 angular.module('projet')
-    .controller('FilmController',['$scope','CinemaService','$stateParams','$mdDialog', function($scope,CinemaService,$stateParams,$mdDialog) {
+.controller('FilmController',['$scope','CinemaService','$stateParams','$mdDialog', function($scope,CinemaService,$stateParams,$mdDialog) {
         $scope.item = {};
 
         CinemaService.getFilmCinema($stateParams.id).success(function (data) {
@@ -66,4 +63,4 @@ angular.module('projet')
 
 
 
-    }]);
+}]);

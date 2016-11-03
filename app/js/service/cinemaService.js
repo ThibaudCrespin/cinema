@@ -1,6 +1,4 @@
-/**
- * Created by crespin on 02/11/2016.
- */
+
 'use strict';
 
 /* Services */
@@ -12,6 +10,7 @@ projet.factory('CinemaService', ['$http', function ($http) {
     return {
         listCinema: function () {
             return $http.get("data/Cinema.json");
+
         }
     };
 }]);
