@@ -13,4 +13,7 @@ projet.controller('CinemaController', ['$scope','CinemaService','$filter', funct
 
     $scope.map = { center: { latitude: 46.1577, longitude: -1.15359 }, zoom: 8 };
 
+    $scope.markers = {
+
+    };
 }]);
