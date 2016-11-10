@@ -28,11 +28,12 @@ projet.controller('CinemaController', ['$scope','CinemaService','$filter', funct
     });
 
     $scope.$watch('search',function () {
-       $scope.markers = [];
 
-        $filter('filter')(array, expression, comparator, anyPropertyKey);
+        $scope.markers = [];
 
-        _.forEach(array, function(item){
+        var result = $filter('filter')($scope.items, $scope.search);
+
+        _.forEach(result, function(item){
             var obj = {
                 "id": item.id,
                 "coord": {
