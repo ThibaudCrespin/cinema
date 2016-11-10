@@ -35,7 +35,7 @@ body {
     margin: 0 auto;
     text-align: left;
 }
-.angular-google-map-container {
+.angular-google-map-container, ng-map {
     height: 400px;
     width:40%;
     margin:auto;

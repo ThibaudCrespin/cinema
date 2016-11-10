@@ -16,8 +16,13 @@
             </tbody>
         </table>
     </div>
+    <!--
     <ui-gmap-google-map center='map.center' zoom='map.zoom'>
         <ui-gmap-marker ng-repeat="marker in markers" coords="marker.coord" idKey="marker.id">
         </ui-gmap-marker>
-    </ui-gmap-google-map>
+    </ui-gmap-google-map>-->
+
+    <ng-map zoom-to-include-markers="auto">
+        <marker ng-repeat="item in items | filter:search" position="[{{item.latitude}}, {{item.longitude}}]" title="{{item.name}}"></marker>
+    </ng-map>
 </div>

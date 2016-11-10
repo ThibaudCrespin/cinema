@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp', ['ngMaterial', 'projet','uiGmapgoogle-maps','ui.router'])
+angular.module('myApp', ['ngMaterial', 'projet','uiGmapgoogle-maps', 'ngMap','ui.router'])
     .config(function ($stateProvider,$urlRouterProvider, uiGmapGoogleMapApiProvider) {
 		
 		$stateProvider.state({
