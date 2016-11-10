@@ -8,21 +8,41 @@ projet.controller('CinemaController', ['$scope','CinemaService','$filter', funct
 
     CinemaService.listCinema().then(function(response){
         $scope.items = response.data;
+
+        $scope.map = { center: { latitude: 46.1577, longitude: -1.15359 }, zoom: 8 };
+
+        $scope.markers = [];
+
+        _.forEach($scope.items, function(item){
+            var obj = {
+                "id": item.id,
+                "coord": {
+                    "latitude": item.latitude,
+                    "longitude": item.longitude
+                }
+            };
+
+            $scope.markers.push(obj);
+        });
+
     });
 
-    $scope.map = { center: { latitude: 46.1577, longitude: -1.15359 }, zoom: 8 };
+    $scope.$watch('search',function () {
+       $scope.markers = [];
 
-    $scope.markers = [];
+        $filter('filter')(array, expression, comparator, anyPropertyKey);
 
-    _.forEach($scope.items, function(item){
-        var obj = {
-            "id": item.id,
-            "coord": {
-                "latitude": item.latitude,
-                "longitude": item.longitude
-            }
-        }
+        _.forEach(array, function(item){
+            var obj = {
+                "id": item.id,
+                "coord": {
+                    "latitude": item.latitude,
+                    "longitude": item.longitude
+                }
+            };
 
-        $scope.markers.push(obj);
+            $scope.markers.push(obj);
+        });
+
     });
 }]);

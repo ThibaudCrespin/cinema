@@ -17,7 +17,7 @@
         </table>
     </div>
     <ui-gmap-google-map center='map.center' zoom='map.zoom'>
-        <ui-gmap-markers ng-repeat="marker in markers" coords="marker.coord" idKey="marker.id">
-        </ui-gmap-markers>
+        <ui-gmap-marker ng-repeat="marker in markers" coords="marker.coord" idKey="marker.id">
+        </ui-gmap-marker>
     </ui-gmap-google-map>
 </div>
