@@ -13,12 +13,11 @@
             <tr data-ng-repeat="item in items | filter:search">
                 <td><a href="#/film/{{item.id}}">{{item.name}}</a></td>
             </tr>
-            <ng-map></ng-map>
             </tbody>
         </table>
     </div>
     <ui-gmap-google-map center='map.center' zoom='map.zoom'>
-        <ui-gmap-markers click="clickMarker" icon="'icon'" models="markers" coords="'coord'">
+        <ui-gmap-markers ng-repeat="marker in markers" coords="marker.coord" idKey="marker.id">
         </ui-gmap-markers>
     </ui-gmap-google-map>
 </div>
