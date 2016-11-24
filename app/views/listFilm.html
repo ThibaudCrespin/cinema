@@ -1,7 +1,7 @@
 <a href="#/">Retour à la liste des cinémas</a>
 
 <div>
-    <ng-map zoom-to-include-markers="auto">
+    <ng-map center="[{{marker.coords.latitude}}, {{marker.coords.longitude}}]">
         <marker position="[{{marker.coords.latitude}}, {{marker.coords.longitude}}]" title="{{marker.name}}"></marker>
     </ng-map>
 
