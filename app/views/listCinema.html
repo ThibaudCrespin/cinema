@@ -1,4 +1,9 @@
 <div>
+
+    <ng-map zoom-to-include-markers="auto">
+        <marker ng-repeat="item in items | filter:search" position="[{{item.latitude}}, {{item.longitude}}]" title="{{item.name}}"></marker>
+    </ng-map>
+
     <p>Recherche : <input type="text" data-ng-model="search" /></p>
 
     <div class="tableau">
@@ -20,8 +25,4 @@
         <ui-gmap-marker ng-repeat="marker in markers" coords="marker.coord" idKey="marker.id">
         </ui-gmap-marker>
     </ui-gmap-google-map>-->
-
-    <ng-map zoom-to-include-markers="auto">
-        <marker ng-repeat="item in items | filter:search" position="[{{item.latitude}}, {{item.longitude}}]" title="{{item.name}}"></marker>
-    </ng-map>
 </div>

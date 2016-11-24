@@ -37,7 +37,7 @@ body {
 }
 .angular-google-map-container, ng-map {
     height: 400px;
-    width:40%;
+    width:50%;
     margin:auto;
     margin-top: 20px;
 }
