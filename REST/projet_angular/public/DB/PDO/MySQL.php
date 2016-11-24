@@ -23,7 +23,7 @@ class DB_PDO_MySQL {
 
             //Update the dbname username and password to suit your server
             $this->db = new PDO(
-                    'mysql:host=localhost;dbname=projet_angular', 'root', '', $options
+                    'mysql:host=localhost;dbname=projet_angular', 'root', 'root', $options
             );
             $this->db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
