@@ -21,7 +21,7 @@ projet.factory('CinemaService', ['$http', function ($http) {
         },
 
         getFilmHoraireFromCinema: function (id_film, id_cinema) {
-            return $http.get("http://localhost/cinema/cinema/REST/projet_angular/public/index.php/cinemahttp://localhost/cinema/cinema/REST/projet_angular/public/index.php/cinema/" + id_film + "/film/" + id_cinema + "/horaire/");
+            return $http.get("http://localhost/cinema/cinema/REST/projet_angular/public/index.php/cinema/" + id_film + "/film/" + id_cinema + "/horaire/");
         }
     };
 }]);

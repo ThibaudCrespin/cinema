@@ -1,5 +1,27 @@
 <a href="#/">Retour à la liste des cinémas</a>
 
+<div>
+    <ng-map zoom-to-include-markers="auto">
+        <marker ng-repeat="item in items"
+                position="[{{item.latitude}}, {{item.longitude}}]" title="{{item.name}}"></marker>
+    </ng-map>
+
+    <div class="tableau">
+        <table>
+            <thead>
+            <tr>
+                <th>Nom</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-ng-repeat="item in items">
+                <td><a href="#/film/{{item.id}}">{{item.name}}</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
 
 
 
