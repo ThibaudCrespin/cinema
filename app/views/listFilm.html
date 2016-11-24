@@ -2,8 +2,7 @@
 
 <div>
     <ng-map zoom-to-include-markers="auto">
-        <marker ng-repeat="item in items"
-                position="[{{item.latitude}}, {{item.longitude}}]" title="{{item.name}}"></marker>
+        <marker position="[{{marker.coords.latitude}}, {{marker.coords.longitude}}]" title="{{marker.name}}"></marker>
     </ng-map>
 
     <div class="tableau">
@@ -14,8 +13,8 @@
             </tr>
             </thead>
             <tbody>
-            <tr data-ng-repeat="item in items">
-                <td><a href="#/film/{{item.id}}">{{item.name}}</a></td>
+            <tr data-ng-repeat="film in item">
+                <td><a href="#/film/{{film.id}}">{{film.titre}}</a></td>
             </tr>
             </tbody>
         </table>
