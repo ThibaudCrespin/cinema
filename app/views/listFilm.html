@@ -16,7 +16,7 @@
             </thead>
             <tbody>
             <tr data-ng-repeat="film in item">
-                <td><a href="#/film/{{film.id}}">{{film.titre}}</a></td>
+                <td>{{film.titre}}</td>
                 <td>{{film.description}}</td>
                 <td><button ng-click="showHoraire(film)">Horaire</button></td>
             </tr>
